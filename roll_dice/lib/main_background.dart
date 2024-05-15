@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:roll_dice/styled_text.dart';
+// import 'package:roll_dice/styled_text.dart';
+import 'package:roll_dice/roll_dice.dart';
+
 class MainBackground extends StatelessWidget {
-  const MainBackground({super.key});
+  const MainBackground(this.color1, this.color2, {super.key});
+
+  final Color color1;
+  final Color color2;
+
+  
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 124, 226, 29),
-            Color.fromARGB(255, 255, 255, 255)
-          ],
+          colors: [color1, color2],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
       ),
       child: const Center(
-        child: StyledText("It's fun"),
+        child: RollDice(),
       ),
     );
     // throw UnimplementedError();
   }
-  
 }
