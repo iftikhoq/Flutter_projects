@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Txt extends StatelessWidget {
   const Txt(this.text, {super.key});
@@ -6,11 +7,14 @@ class Txt extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Text(text,
-        style: const TextStyle(
-            color: Color.fromARGB(255, 0, 0, 0),
-            fontSize: 20,
-            fontWeight: FontWeight.w800));
+    return Text(
+      text,
+      style: GoogleFonts.kdamThmorPro(
+          color: const Color.fromARGB(255, 10, 46, 1),
+          fontSize: 20,
+          fontWeight: FontWeight.bold),
+      textAlign: TextAlign.center,
+    );
     // throw UnimplementedError();
   }
 }
