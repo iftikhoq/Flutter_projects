@@ -5,7 +5,8 @@ void main() {
   runApp(
     const MaterialApp(
       home: Scaffold(
-        body: MainBackground(Color.fromARGB(255, 79, 172, 254),
+        body: MainBackground(
+          Color.fromARGB(255, 79, 172, 254),
             Color.fromARGB(255, 0, 241, 254)),
       ),
     ),
